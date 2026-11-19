@@ -80,7 +80,9 @@ class IntegracaoTest {
                 .andExpect(jsonPath("$.titulo").value("Dom Casmurro"))
                 .andExpect(jsonPath("$.genero").value("Romance"))
                 .andExpect(jsonPath("$.autor.id").value(autorId))
-                .andExpect(jsonPath("$.autor.nome").value("Machado de Assis"));
+                .andExpect(jsonPath("$.autor.nome").value("Machado de Assis"))
+                // data lida de volta do banco (nao pode perder 1 dia por causa de fuso horario)
+                .andExpect(jsonPath("$.autor.dataNascimento").value("1839-06-21"));
 
         // 4) lista os livros do autor
         mockMvc.perform(get("/api/livros/autor/" + autorId))
