@@ -1,0 +1,22 @@
+# ===== Backend (Java / Maven) =====
+target/
+*.class
+*.jar
+*.log
+
+# ===== Frontend (Node / React) =====
+node_modules/
+build/
+coverage/
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+npm-debug.log*
+
+# ===== IDEs / SO =====
+.idea/
+.vscode/
+*.iml
+.DS_Store
+Thumbs.db
