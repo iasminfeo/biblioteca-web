@@ -14,7 +14,7 @@ test('mostra os autores retornados pela API', async () => {
   });
 
   render(
-    <MemoryRouter>
+    <MemoryRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
       <AutorList />
     </MemoryRouter>
   );
