@@ -19,6 +19,8 @@
 
     <properties>
         <java.version>17</java.version>
+        <!-- Testes tambem rodam em UTC (mesmo fuso da aplicacao) -->
+        <argLine>-Duser.timezone=UTC</argLine>
     </properties>
 
     <dependencies>
