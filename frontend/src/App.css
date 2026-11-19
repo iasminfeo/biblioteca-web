@@ -9,7 +9,11 @@ body {
   color: #1f2933;
 }
 
+/* ===== Menu ===== */
 .menu {
+  display: flex;
+  align-items: center;
+  gap: 32px;
   background: #1f3a5f;
   color: #fff;
   padding: 12px 24px;
@@ -20,8 +24,127 @@ body {
   font-size: 1.4rem;
 }
 
+.menu nav {
+  display: flex;
+  gap: 16px;
+}
+
+.menu nav a {
+  color: #cfdcec;
+  text-decoration: none;
+  padding: 6px 10px;
+  border-radius: 4px;
+}
+
+.menu nav a.active,
+.menu nav a:hover {
+  background: #2f5687;
+  color: #fff;
+}
+
+/* ===== Conteudo ===== */
 .conteudo {
   max-width: 960px;
   margin: 24px auto;
   padding: 0 16px;
+}
+
+.cabecalho {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* ===== Tabela ===== */
+.tabela {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.tabela th,
+.tabela td {
+  padding: 10px 12px;
+  border-bottom: 1px solid #e3e8ef;
+  text-align: left;
+}
+
+.tabela th {
+  background: #e8eef6;
+}
+
+/* ===== Formulario ===== */
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-width: 480px;
+  background: #fff;
+  padding: 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.formulario label {
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+.formulario input,
+.formulario select {
+  padding: 8px;
+  border: 1px solid #c3ccd8;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+/* ===== Botoes ===== */
+.acoes {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.tabela .acoes {
+  margin-top: 0;
+}
+
+.botao {
+  display: inline-block;
+  padding: 6px 14px;
+  border: 1px solid #c3ccd8;
+  border-radius: 4px;
+  background: #fff;
+  color: #1f2933;
+  font-size: 0.95rem;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.botao-primario {
+  background: #1f6feb;
+  border-color: #1f6feb;
+  color: #fff;
+}
+
+.botao-perigo {
+  background: #d64545;
+  border-color: #d64545;
+  color: #fff;
+}
+
+.mensagem-erro {
+  color: #b42318;
+  background: #fde8e7;
+  padding: 8px 12px;
+  border-radius: 4px;
+}
+
+.filtro {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 12px 0;
 }
