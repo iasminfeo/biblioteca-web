@@ -1,0 +1,17 @@
+services:
+  # Banco de dados PostgreSQL 15
+  # Para subir so o banco (desenvolvimento local): docker-compose up -d postgres
+  postgres:
+    image: postgres:15
+    container_name: biblioteca-postgres
+    environment:
+      POSTGRES_DB: biblioteca_db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
